@@ -5,7 +5,7 @@ import uuid
 import base64
 import os
 
-client = genai.Client()
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 st.set_page_config(page_title="AnmolAI Gemini Chat", page_icon="🤖")
 st.title("🤖 AnmolAI – Gemini Chat + Voice Output")
@@ -52,3 +52,4 @@ if send_button and user_input:
     for f in os.listdir():
         if f.startswith("audio_") and f != file_name:
             os.remove(f)
+
