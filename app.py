@@ -8,7 +8,7 @@ import os
 client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 st.set_page_config(page_title="AnmolAI")
-st.title" Anmol-AI")
+st.title("Anmol-AI")
 
 user_input = st.text_input("You:", placeholder="Type your message...")
 send_button = st.button("Send")
@@ -24,6 +24,7 @@ if send_button and user_input:
 
     st.markdown("###  AnmolAI:")
     st.write(answer)
+
 
 
 
